@@ -1,46 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: url('https://placehold.co/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+        }
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e50914;
+            margin-top: 20px;
+        }
+        .language-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .sign-in-btn {
+            position: absolute;
+            top: 20px;
+            right: 120px;
+            background: #e50914;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .main-content {
+            margin-top: 150px;
+        }
+        .main-content h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .email-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .email-form input[type="email"] {
+            padding: 15px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            width: 300px;
+        }
+        .email-form button {
+            padding: 15px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background: #e50914;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Simple Website</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>This is a simple website to demonstrate HTML, CSS, JavaScript, and PHP integration.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm" method="POST" action="submit.php">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-        <div id="messageResponse"></div>
-    </section>
-
-    <footer>
-        <p>© 2024 Simple Website</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="logo">NETFLIX</div>
+        <div class="language-select">
+            <i class="fas fa-globe"></i> English
+        </div>
+        <button class="sign-in-btn">Sign In</button>
+        <div class="main-content">
+            <h1>Unlimited movies, TV shows, and more</h1>
+            <p>Starts at IDR 54,000. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-form">
+                <input type="email" placeholder="Email address">
+                <button>Get Started <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
